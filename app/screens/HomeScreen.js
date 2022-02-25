@@ -10,7 +10,7 @@ console.log("in HomeScreen");
 
 function HomeScreen(props) {
 
-  console.log("in home screen function");
+  console.log("home screen function");
   return (
     <ImageBackground
       blurRadius={10}

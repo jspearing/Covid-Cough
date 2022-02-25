@@ -13,14 +13,14 @@ const initialMessages = [
     id: 1,
     title: "Covid-Cough",
     description: "Hey!",
-    image: require("../assets/MSDS498_CC_Logo2.png"),
+    image: require("../assets/MSDS498_CC_logo2.png"),
   },
   {
     id: 2,
     title: "Covid-Cough",
     description:
       "Hey!",
-    image: require("../assets/MSDS498_CC_Logo2.jpg"),
+    image: require("../assets/MSDS498_CC_logo2.png"),
   },
 ];
 
@@ -57,7 +57,7 @@ function MessagesScreen(props) {
               id: 2,
               title: "T2",
               description: "D2",
-              image: require("../assets/MSDS498_CC_Logo2.jpg"),
+              image: require("../assets/MSDS498_CC_logo2.png"),
             },
           ]);
         }}

@@ -35,7 +35,7 @@ function AccountScreen({ navigation }) {
         <ListItem
           title={user.name}
           subTitle={user.email}
-          image={require("../assets/MSDS498_CC_logo2.jpg")}
+          image={require("../assets/MSDS498_CC_logo2.png")}
         />
       </View>
       <View style={styles.container}>

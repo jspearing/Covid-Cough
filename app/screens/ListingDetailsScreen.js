@@ -33,7 +33,7 @@ function ListingDetailsScreen({ route }) {
         <Text style={styles.result}>${listing.result}</Text>
         <View style={styles.userContainer}>
           <ListItem
-            image={require("../assets/MSDS498_CC_logo2.jpg")}
+            image={require("../assets/MSDS498_CC_logo2.png")}
             title="Covid-Cough"
             subTitle="5 Rcordings"
           />

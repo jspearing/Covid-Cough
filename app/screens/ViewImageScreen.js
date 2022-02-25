@@ -20,7 +20,7 @@ function ViewImageScreen(props) {
       <Image
         resizeMode="contain"
         style={styles.image}
-        source={require("../assets/MSDS498_CC_Logo2.jpg")}
+        source={require("../assets/MSDS498_CC_logo2.png")}
       />
     </View>
   );

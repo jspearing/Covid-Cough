@@ -30,7 +30,7 @@ function LoginScreen(props) {
 
   return (
     <Screen style={styles.container}>
-      <Image style={styles.logo} source={require("../assets/logo-red.png")} />
+      <Image style={styles.logo} source={require("../assets/MSDS498_CC_logo2.png")} />
 
       <Form
         initialValues={{ email: "", password: "" }}

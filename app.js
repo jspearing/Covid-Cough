@@ -8,35 +8,29 @@ import Screen from "./app/components/Screen";
 //import WelcomeScreen from "./app/screens/WelcomeScreen";
 //import ViewImageScreen from "./app/screens/ViewImageScreen";
 //import AppInfoScreen from "./app/screens/AppInfoScreen";
-import CompanyInfoScreen from "./app/screens/CompanyInfoScreen";
+//import CompanyInfoScreen from "./app/screens/CompanyInfoScreen";
 //import LoginScreen from "./app/screens/LoginScreen";
 //import RegisterScreen from "./app/screens/RegisterScreen";
 //import HomeScreen from "./app/screens/HomeScreen";
 
 //import navigationTheme from "./app/navigation/navigationTheme";
 
-const Tweets = ({ navigation }) => (
-    <Screen>
-        <Text>Tweets</Text>
-        <Button        
-            onPress={() => navigation.navigate("TweetDetails")}
-            title = "View Tweet" 
-        />           
-    </Screen>
-);
-
-const TweetDetails = () => (
-    <Screen>
-        <Text>TweetDetails</Text>
-    </Screen>
-);
-
 const CompanyInfo = ({ navigation }) => (
     <Screen>
-        <Text>Tweets</Text>
+       <Text>View Company Info</Text>
         <Button title = "View Company Info" 
-            onPress={() => navigation.navigate("CompanyInfo")}>
+            onPress={() => navigation.navigate("CompanyInfo")} >
             <img src="./app/assets/MSDS498_MDT_Logo.png"></img>
+        </Button>            
+    </Screen>
+);
+
+const AppInfo = ({ navigation }) => (
+    <Screen>
+        <Text>View Application Info</Text>
+        <Button title = "View Application Info" 
+            onPress={() => navigation.navigate("AppInfo")} >
+            <img src="./app/assets/MSDS498_CC_logo2.png"></img>
         </Button>
     </Screen>
 );
@@ -44,10 +38,9 @@ const CompanyInfo = ({ navigation }) => (
 const Stack = createStackNavigator();
 
 const StackNavigator = () => (
-    <Stack.Navigator>
-        <Stack.Screen name="Tweets" component={Tweets} />
-        <Stack.Screen name="TweetDetails" component={TweetDetails} />
+    <Stack.Navigator initialRouteName = "CompanyInfo">
         <Stack.Screen name="About MDT" component={CompanyInfo} />
+        <Stack.Screen name="About CovidCough" component={AppInfo} />
     </Stack.Navigator>
 )
 

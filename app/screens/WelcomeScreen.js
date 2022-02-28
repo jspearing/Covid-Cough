@@ -9,10 +9,10 @@ function WelcomeScreen({ navigation }) {
     <ImageBackground
       blurRadius={10}
       style={styles.background}
-      source={require("../assets/MDT_CC_background1.png")}
+      source={require("../assets/background.jpg")}
     >
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("../assets/MSDS498_CC_logo2.png")} />
+        <Image style={styles.logo} source={require("../assets/logo-red.png")} />
         <Text style={styles.tagline}>Sell What You Don't Need</Text>
       </View>
       <View style={styles.buttonsContainer}>

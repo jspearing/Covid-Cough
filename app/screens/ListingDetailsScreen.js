@@ -1,46 +1,28 @@
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  KeyboardAvoidingView,
-  Platform,
-  Keyboard,
-} from "react-native";
-import { Image } from "react-native-expo-image-cache";
+import { View, Image, StyleSheet } from "react-native";
 
 import colors from "../config/colors";
-import ContactSellerForm from "../components/ContactUsForm";
 import ListItem from "../components/lists/ListItem";
 import Text from "../components/Text";
-import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 function ListingDetailsScreen({ route }) {
   const listing = route.params;
 
   return (
-    <KeyboardAvoidingView
-      behavior="position"
-      keyboardVerticalOffset={Platform.OS === "ios" ? 0 : 100}
-    >
-      <Image
-        style={styles.image}
-        preview={{ uri: listing.recordings[0].thumbnailUrl }}
-        tint="light"
-        uri={listing.recordings[0].url}
-      />
+    <View>
+      <Image style={styles.image} source={listing.image} />
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>{listing.title}</Text>
-        <Text style={styles.result}>${listing.result}</Text>
+        <Text style={styles.price}>${listing.price}</Text>
         <View style={styles.userContainer}>
           <ListItem
-            image={require("../assets/MSDS498_CC_logo2.png")}
-            title="Covid-Cough"
-            subTitle="5 Rcordings"
+            image={require("../assets/mosh.jpg")}
+            title="Mosh Hamedani"
+            subTitle="5 Listings"
           />
         </View>
-        <ContactUsForm listing={listing} />
       </View>
-    </KeyboardAvoidingView>
+    </View>
   );
 }
 

@@ -6,7 +6,6 @@ import colors from "../config/colors";
 import Icon from "../components/Icon";
 import routes from "../navigation/routes";
 import Screen from "../components/Screen";
-import useAuth from "../auth/useAuth";
 
 const menuItems = [
   {
@@ -27,15 +26,13 @@ const menuItems = [
 ];
 
 function AccountScreen({ navigation }) {
-  const { user, logOut } = useAuth();
-
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
-          title={user.name}
-          subTitle={user.email}
-          image={require("../assets/MSDS498_CC_logo2.png")}
+          title="Mosh Hamedani"
+          subTitle="programmingwithmosh@gmail.com"
+          image={require("../assets/mosh.jpg")}
         />
       </View>
       <View style={styles.container}>
@@ -60,7 +57,6 @@ function AccountScreen({ navigation }) {
       <ListItem
         title="Log Out"
         IconComponent={<Icon name="logout" backgroundColor="#ffe66d" />}
-        onPress={() => logOut()}
       />
     </Screen>
   );

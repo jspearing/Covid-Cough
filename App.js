@@ -1,17 +1,13 @@
 import React from "react";
-import { View } from "react-native";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-import AppInfoScreen from "./app/screens/AppInfoScreen";
-import CompanyInfoScreen from "./app/screens/CompanyInfoScreen";
-import LoginScreen from "./app/screens/LoginScreen";
-import RegisterScreen from "./app/screens/RegisterScreen";
-import HomeScreen from "./app/screens/HomeScreen";
+import { NavigationContainer } from "@react-navigation/native";
 
-
-console.log("in app.js");
+import navigationTheme from "./app/navigation/navigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
 
 export default function App() {
-  console.log("in app function")
-  return <HomeScreen />;
+  return (
+    <NavigationContainer theme={navigationTheme}>
+      <AppNavigator />
+    </NavigationContainer>
+  );
 }

@@ -18,15 +18,10 @@ import CompanyInfoScreen from "./app/screens/CompanyInfoScreen";
 const Tweets = ({ navigation }) => (
     <Screen>
         <Text>Tweets</Text>
-        <Button
-            title="View Tweet"
-            onPress={() => navigation.navigate("TweetDetails")} 
-        />
-         <Button>
-            title="View Company Info"
-            <img src="./app/assets/MSDS498_MDT_Logo.png"></img>
-            onPress={() => navigation.navigate("CompanyInfoScreen")} 
-            </Button>
+        <Button        
+            onPress={() => navigation.navigate("TweetDetails")}
+            title = "View Tweet" 
+        />           
     </Screen>
 );
 
@@ -36,15 +31,28 @@ const TweetDetails = () => (
     </Screen>
 );
 
+const CompanyInfo = ({ navigation }) => (
+    <Screen>
+        <Text>Tweets</Text>
+        <Button title = "View Company Info" 
+            onPress={() => navigation.navigate("CompanyInfo")}>
+            <img src="./app/assets/MSDS498_MDT_Logo.png"></img>
+        </Button>
+    </Screen>
+);
+
 const Stack = createStackNavigator();
 
 const StackNavigator = () => (
     <Stack.Navigator>
         <Stack.Screen name="Tweets" component={Tweets} />
         <Stack.Screen name="TweetDetails" component={TweetDetails} />
-        <Stack.Screen name="About Us" component={CompanyInfoScreen} />
+        <Stack.Screen name="About MDT" component={CompanyInfo} />
     </Stack.Navigator>
 )
+
+
+
 export default function App() {
     return (
         <NavigationContainer>

@@ -6,12 +6,13 @@ import Screen from "./app/components/Screen";
 import { Button } from "react-native-web";
 import navigationTheme from "./app/navigation/navigationTheme";
 
-const Tweets = () => (
+const Tweets = ({ navigation }) => (
     <Screen>
-        <Text>Tweet</Text>
+        <Text>Tweets</Text>
         <Button
             title = "View Tweet"
-            onPress={() => navigationTheme.navigate("TweetDetails")} />
+            onPress={() => navigation.navigate("TweetDetails")} 
+        />
     </Screen>
 );
 

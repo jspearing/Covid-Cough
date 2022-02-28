@@ -5,6 +5,14 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import Screen from "./app/components/Screen";
 
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+import AppInfoScreen from "./app/screens/AppInfoScreen";
+import CompanyInfoScreen from "./app/screens/CompanyInfoScreen";
+import LoginScreen from "./app/screens/LoginScreen";
+import RegisterScreen from "./app/screens/RegisterScreen";
+import HomeScreen from "./app/screens/HomeScreen";
+
 //import navigationTheme from "./app/navigation/navigationTheme";
 
 const Tweets = ({ navigation }) => (
@@ -14,6 +22,11 @@ const Tweets = ({ navigation }) => (
             title="View Tweet"
             onPress={() => navigation.navigate("TweetDetails")} 
         />
+         <Button>
+            title="View Company Info"
+            <img src="./app/assets/MSDS498_MDT_Logo.png"></img>
+            onPress={() => navigation.navigate("CompanyInfoScreen")} 
+            </Button>
     </Screen>
 );
 
@@ -29,6 +42,7 @@ const StackNavigator = () => (
     <Stack.Navigator>
         <Stack.Screen name="Tweets" component={Tweets} />
         <Stack.Screen name="TweetDetails" component={TweetDetails} />
+        <Stack.Screen name="About Us" component={CompanyInfoScreen} />
     </Stack.Navigator>
 )
 export default function App() {

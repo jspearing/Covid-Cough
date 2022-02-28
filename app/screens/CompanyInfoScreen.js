@@ -1,22 +1,14 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 
-import Button from "../components/Button";
-import LoginScreen from "./LoginScreen";
-import RegisterScreen from "./RegisterScreen";
-
 console.log("in company info screen");
 
 function CompanyInfoScreen(props) {
   console.log("in company info screen function");
   return (
-    <ImageBackground
+    <ImageBackground>
       style={styles.background}
       source={require("../assets/MSDS498_CC_AboutMDT.png")}
-    >
-      <View style={styles.buttonsContainer}>
-        <Button title="Back" color="primary" onPress={LoginScreen}/>
-      </View>
     </ImageBackground>
   );
 }

@@ -5,13 +5,13 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import Screen from "./app/components/Screen";
 
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-import AppInfoScreen from "./app/screens/AppInfoScreen";
+//import WelcomeScreen from "./app/screens/WelcomeScreen";
+//import ViewImageScreen from "./app/screens/ViewImageScreen";
+//import AppInfoScreen from "./app/screens/AppInfoScreen";
 import CompanyInfoScreen from "./app/screens/CompanyInfoScreen";
-import LoginScreen from "./app/screens/LoginScreen";
-import RegisterScreen from "./app/screens/RegisterScreen";
-import HomeScreen from "./app/screens/HomeScreen";
+//import LoginScreen from "./app/screens/LoginScreen";
+//import RegisterScreen from "./app/screens/RegisterScreen";
+//import HomeScreen from "./app/screens/HomeScreen";
 
 //import navigationTheme from "./app/navigation/navigationTheme";
 

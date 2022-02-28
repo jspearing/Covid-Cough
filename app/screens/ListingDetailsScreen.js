@@ -13,12 +13,12 @@ function ListingDetailsScreen({ route }) {
       <Image style={styles.image} source={listing.image} />
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>{listing.title}</Text>
-        <Text style={styles.price}>${listing.price}</Text>
+        <Text style={styles.result}>{listing.result}</Text>
         <View style={styles.userContainer}>
           <ListItem
-            image={require("../assets/mosh.jpg")}
-            title="Mosh Hamedani"
-            subTitle="5 Listings"
+            image={require("../assets/MSDS498_CC_logo2.png")}
+            title="Result"
+            subTitle="Negative"
           />
         </View>
       </View>

@@ -9,15 +9,15 @@ import Screen from "../components/Screen";
 const listings = [
   {
     id: 1,
-    title: "Red jacket for sale",
+    title: "Cough Recording 1",
     price: 100,
-    image: require("../assets/jacket.jpg"),
+    image: require("../assets/recording_icon.png"),
   },
   {
     id: 2,
-    title: "Couch in great condition",
+    title: "Cough Recording 2",
     price: 1000,
-    image: require("../assets/couch.jpg"),
+    image: require("../assets/recording_icon.png"),
   },
 ];
 

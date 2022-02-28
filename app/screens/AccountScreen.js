@@ -30,9 +30,9 @@ function AccountScreen({ navigation }) {
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
-          title="Mosh Hamedani"
-          subTitle="programmingwithmosh@gmail.com"
-          image={require("../assets/mosh.jpg")}
+          title="Recording"
+          subTitle="MSDS 498 MediData Technologies"
+          image={require("../assets/MSDS498_MDT_Logo.png")}
         />
       </View>
       <View style={styles.container}>

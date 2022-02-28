@@ -1,13 +1,38 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-
+import { Text } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import Screen from "./app/components/Screen";
+import { Button } from "react-native-web";
 import navigationTheme from "./app/navigation/navigationTheme";
-import AppNavigator from "./app/navigation/AppNavigator";
 
+const Tweets = () => (
+    <Screen>
+        <Text>Tweet</Text>
+        <Button
+            title = "View Tweet"
+            onPress={() => navigationTheme.navigate("TweetDetails")} />
+    </Screen>
+);
+
+const TweetDetails = () => (
+    <Screen>
+        <Text>TweetDetails</Text>
+    </Screen>
+);
+
+const Stack = createStackNavigator();
+
+const StackNavigator = () => (
+    <Stack.Navigator>
+        <Stack.Screen name="Tweets" component={Tweets} />
+        <Stack.Screen name="TweetDetails" component={TweetDetails} />
+    </Stack.Navigator>
+)
 export default function App() {
-  return (
-    <NavigationContainer theme={navigationTheme}>
-      <AppNavigator />
-    </NavigationContainer>
-  );
+    return (
+        <NavigationContainer>
+            <StackNavigator />
+        </NavigationContainer>
+    );
 }

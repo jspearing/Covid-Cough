@@ -12,7 +12,7 @@ const Tweets = ({ navigation }) => (
         <Text>Tweets</Text>
         <Button
             title="View Tweet"
-            //onPress={() => navigation.navigate("TweetDetails")} 
+            onPress={() => navigation.navigate("TweetDetails")} 
         />
     </Screen>
 );

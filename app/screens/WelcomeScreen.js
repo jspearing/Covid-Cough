@@ -13,7 +13,7 @@ function WelcomeScreen({ navigation }) {
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/MSDS498_CC_logo2.png")} />
-        <Text style={styles.tagline}>Test your cough for now!</Text>
+        <Text style={styles.tagline}>Test your cough now!</Text>
       </View>
       <View style={styles.buttonsContainer}>
         <Button
@@ -22,7 +22,7 @@ function WelcomeScreen({ navigation }) {
         />
         <Button
           title="Guest"
-          color="tertiary"
+          color="secondary"
           onPress={() => navigation.navigate("Guest")}
         />
       </View>

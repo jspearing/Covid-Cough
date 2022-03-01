@@ -8,14 +8,14 @@ import Screen from "../components/Screen";
 
 const menuItems = [
   {
-    title: "My Listings",
+    title: "My Results",
     icon: {
       name: "format-list-bulleted",
       backgroundColor: colors.primary,
     },
   },
   {
-    title: "My History",
+    title: "My Recordings",
     icon: {
       name: "email",
       backgroundColor: colors.secondary,
@@ -23,14 +23,14 @@ const menuItems = [
   },
 ];
 
-function AccountScreen(props) {
+function GuestScreen(props) {
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
         <ListItem
-          title="MediDataTech"
-          subTitle="CovidCough"
-          image={require("../assets/MSDS498_MDT_Logo.png")}
+          title="Covid Test"
+          subTitle="Record Cough"
+          image={require("../assets/MSDS498_CC_logo2.png")}
         />
       </View>
       <View style={styles.container}>
@@ -51,10 +51,6 @@ function AccountScreen(props) {
           )}
         />
       </View>
-      <ListItem
-        title="Log Out"
-        IconComponent={<Icon name="logout" backgroundColor="#ffe66d" />}
-      />
     </Screen>
   );
 }
@@ -68,4 +64,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AccountScreen;
+export default GuestScreen;

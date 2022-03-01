@@ -2,14 +2,14 @@ import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 
 import Button from "../components/Button";
-import routes from "../navigation/routes";
+//import routes from "../navigation/routes";
 
 function WelcomeScreen({ navigation }) {
   return (
     <ImageBackground
       blurRadius={10}
       style={styles.background}
-      source={require("../assets/MSDS498_CC_background1.png")}
+      source={require("../assets/MDT_CC_background1.png")}
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/MSDS498_CC_logo2.png")} />
@@ -18,12 +18,17 @@ function WelcomeScreen({ navigation }) {
       <View style={styles.buttonsContainer}>
         <Button
           title="Login"
-          onPress={() => navigation.navigate(routes.LOGIN)}
+          onPress={() => navigation.navigate("Login")}
         />
         <Button
           title="Register"
           color="secondary"
-          onPress={() => navigation.navigate(routes.REGISTER)}
+          onPress={() => navigation.navigate("Register")}
+        />
+        <Button
+          title="Guest"
+          color="tertiary"
+          onPress={() => navigation.navigate("Guest")}
         />
       </View>
     </ImageBackground>

@@ -10,13 +10,13 @@ const listings = [
   {
     id: 1,
     title: "Cough Recording 1",
-    price: 100,
+    result: "Negative",
     image: require("../assets/recording_icon.png"),
   },
   {
     id: 2,
     title: "Cough Recording 2",
-    price: 1000,
+    result: "Positive",
     image: require("../assets/recording_icon.png"),
   },
 ];
@@ -30,7 +30,7 @@ function ListingsScreen({ navigation }) {
         renderItem={({ item }) => (
           <Card
             title={item.title}
-            subTitle={"$" + item.price}
+            subTitle={item.result}
             image={item.image}
             onPress={() => navigation.navigate(routes.LISTING_DETAILS, item)}
           />

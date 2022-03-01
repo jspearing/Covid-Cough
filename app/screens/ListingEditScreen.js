@@ -15,7 +15,7 @@ import useLocation from "../hooks/useLocation";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
-  price: Yup.number().required().min(1).max(10000).label("Result"),
+  result: Yup.string().required().min(1).max(15).label("Result"),
   description: Yup.string().label("Description"),
   category: Yup.object().required().nullable().label("Category"),
   images: Yup.array().min(1, "Please select at least one recording."),
@@ -86,21 +86,19 @@ function ListingEditScreen() {
       <Form
         initialValues={{
           title: "",
-          price: "",
+          Result: "",
           description: "",
           category: null,
-          images: [],
+          Recording: [],
         }}
         onSubmit={(values) => console.log(location)}
         validationSchema={validationSchema}
       >
-        <FormImagePicker name="images" />
+        <FormRecordingPicker name="recordings" />
         <FormField maxLength={255} name="title" placeholder="Title" />
         <FormField
-          keyboardType="numeric"
-          maxLength={8}
-          name="price"
-          placeholder="Price"
+          name="result"
+          placeholder="result"
           width={120}
         />
         <Picker

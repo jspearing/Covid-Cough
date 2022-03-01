@@ -17,7 +17,7 @@ const menuItems = [
   {
     title: "My Recordings",
     icon: {
-      name: "email",
+      name: "record",
       backgroundColor: colors.secondary,
     },
   },

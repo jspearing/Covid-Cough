@@ -25,7 +25,7 @@ function HomeScreen(props) {
         <Text style={styles.tagline}>by MediDataTech</Text>
       </View>
       <View style={styles.buttonsContainer}>
-        <Button title="Guest" color="#a8c5e5" onPress={LoginScreen}/>
+        <Button title="Guest" color="#a8c5e5" onPress={GuestScreen}/>
         <Button title="Login" color="primary" onPress={LoginScreen}/>
         <Button title="Register" color="secondary" onPress={RegisterScreen}/>
       </View>

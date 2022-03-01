@@ -11,16 +11,16 @@ import {
 const initialMessages = [
   {
     id: 1,
-    title: "Mosh Hamedani",
-    description: "Hey! Is this item still available?",
-    image: require("../assets/mosh.jpg"),
+    title: "How does this work?",
+    description: "Can I trust this to tell me if I have Covid?",
+    image: require("../assets/MSDS498_CC_logo2.png"),
   },
   {
     id: 2,
-    title: "Mosh Hamedani",
+    title: "What do I do?",
     description:
-      "I'm interested in this item. When will you be able to post it?",
-    image: require("../assets/mosh.jpg"),
+      "What do I do if the result is positive?",
+    image: require("../assets/MSDS498_CC_logo2.png"),
   },
 ];
 
@@ -57,7 +57,7 @@ function MessagesScreen(props) {
               id: 2,
               title: "T2",
               description: "D2",
-              image: require("../assets/mosh.jpg"),
+              image: require("../assets/MSDS498_CC_logo2.png"),
             },
           ]);
         }}

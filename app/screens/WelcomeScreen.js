@@ -13,17 +13,12 @@ function WelcomeScreen({ navigation }) {
     >
       <View style={styles.logoContainer}>
         <Image style={styles.logo} source={require("../assets/MSDS498_CC_logo2.png")} />
-        <Text style={styles.tagline}>Test your cough and get immediate resutls!</Text>
+        <Text style={styles.tagline}>Test your cough for now!</Text>
       </View>
       <View style={styles.buttonsContainer}>
         <Button
           title="Login"
           onPress={() => navigation.navigate("Login")}
-        />
-        <Button
-          title="Register"
-          color="secondary"
-          onPress={() => navigation.navigate("Register")}
         />
         <Button
           title="Guest"

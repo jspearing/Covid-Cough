@@ -2,7 +2,11 @@
   "expo": {
     "name": "Covid-Cough",
     "slug": "Covid-Cough",
-    "platforms": ["ios", "android", "web"],
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
@@ -14,10 +18,13 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
-    "description": "Real-time reusable covid testing by recording your cough and using machine learning to analyze it and provide results no swab needed!!"
+    "description": "Real-time reusable covid testing by recording your cough and using machine learning to analyze it and provide results no swab needed!!",
+    "githubUrl": "https://github.com/jspearing/Covid-Cough.git"
   }
 }

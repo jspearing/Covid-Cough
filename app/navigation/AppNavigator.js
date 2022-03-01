@@ -32,7 +32,7 @@ const AppNavigator = () => (
         ),
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons
-            name="plus-circle"
+            name="record-voice-over"
             color={color}
             size={size}
           />
@@ -44,7 +44,7 @@ const AppNavigator = () => (
       component={AccountNavigator}
       options={{
         tabBarIcon: ({ color, size }) => (
-          <MaterialCommunityIcons name="account" color={color} size={size} />
+          <MaterialCommunityIcons name="account-cog" color={color} size={size} />
         ),
       }}
     />

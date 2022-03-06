@@ -11,7 +11,6 @@ import CompanyInfoScreen from "./CompanyInfoScreen";
 import { createStackNavigator } from '@react-navigation/stack';
 
 console.log("in guest screen");
-
 const menuItems = [
   {
     title: "My Results",
@@ -33,7 +32,7 @@ function GuestScreen({ navigation }) {
   console.log("in guest screen function");
   return (
     <Screen style={styles.screen}>
-      <View>
+      <View style={styles.container}>
         <ListItem
           title="Covid Test"
           subTitle="Record Cough"
@@ -45,10 +44,20 @@ function GuestScreen({ navigation }) {
   );
 }
 
+const Stack = createStackNavigator();
+
+const StackNavigator = () => (
+    <Stack.Navigator>
+        <Stack.Screen name="App Info" component={AppInfoScreen} />
+        <Stack.Screen name="Company Info" component={CompanyInfoScreen} />
+    </Stack.Navigator>
+)
+
+
 const styles = StyleSheet.create({
   screen: {
     backgroundColor: colors.light,
-  }
+  },
 });
 
 export default GuestScreen;

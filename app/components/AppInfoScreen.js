@@ -1,0 +1,1 @@
+../screens/AppInfoScreen.js

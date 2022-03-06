@@ -32,7 +32,7 @@ const AppNavigator = () => (
         ),
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons
-            name="record-voice-over"
+            name="record"
             color={color}
             size={size}
           />

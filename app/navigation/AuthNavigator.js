@@ -2,10 +2,9 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import LoginScreen from "../screens/LoginScreen";
-import RegisterScreen from "../screens/RegisterScreen";
 import WelcomeScreen from "../screens/WelcomeScreen";
 import GuestScreen from "../screens/GuestScreen";
-import RecordScreen from "../screens/RecordScreen";
+import GuestRecordScreen from "../screens/GuestRecordScreen";
 
 const Stack = createStackNavigator();
 
@@ -17,8 +16,7 @@ const AuthNavigator = () => (
       options={{ headerShown: false }}
     />
     <Stack.Screen name="Login" component={LoginScreen} />
-    <Stack.Screen name="Register" component={RegisterScreen} />
-    <Stack.Screen name="Guest" component={GuestScreen} />
+    <Stack.Screen name="GuestRecord" component={GuestRecordScreen} />
   </Stack.Navigator>
 );
 

@@ -11,7 +11,7 @@ import Screen from "./app/components/Screen";
 //import ViewImageScreen from "./app/screens/ViewImageScreen";
 //import AppInfoScreen from "./app/screens/AppInfoScreen";
 import CompanyInfoScreen from "./app/screens/CompanyInfoScreen";
-import AccountScreen from "./app/screens/AccountScreen";
+import AccountScreen from "./app/screens/AccountScreen.bak";
 //import LoginScreen from "./app/screens/LoginScreen";
 //import RegisterScreen from "./app/screens/RegisterScreen";
 //import HomeScreen from "./app/screens/HomeScreen";

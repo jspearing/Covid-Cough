@@ -9,7 +9,7 @@ function NewListingButton({ onPress }) {
     <TouchableOpacity onPress={onPress}>
       <View style={styles.container}>
         <MaterialCommunityIcons
-          name="record-voice-over"
+          name="record"
           color={colors.white}
           size={40}
         />

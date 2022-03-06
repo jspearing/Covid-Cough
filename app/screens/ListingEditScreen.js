@@ -10,7 +10,7 @@ import {
 } from "../components/forms";
 import CategoryPickerItem from "../components/CategoryPickerItem";
 import Screen from "../components/Screen";
-import FormImagePicker from "../components/forms/FormImagePicker";
+import FormRecordingPicker from "../components/forms/FormRecordingPicker";
 import useLocation from "../hooks/useLocation";
 
 const validationSchema = Yup.object().shape({

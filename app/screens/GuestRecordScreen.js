@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { SafeAreaView, StyleSheet, View, Alert, Text, Button} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Audio } from 'expo-av'
 import { FontAwesome } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
@@ -9,12 +7,10 @@ import { Stopwatch } from 'react-native-stopwatch-timer';
 import * as FileSystem from "expo-file-system";
 import Spinner from 'react-native-loading-spinner-overlay';
 
-console.log("in Record Screen");
+console.log("in Guest Record Screen");
 
-
-
-export default function GuestScreen(){
-  console.log("in recordScreen function")
+export default function GuestRecordScreen(){
+  console.log("in Guest recordScreen function")
   const [recording, setRecording] = React.useState();
   const [recordings, setRecordings] = React.useState([]);
   const [message, setMessage] = React.useState("");

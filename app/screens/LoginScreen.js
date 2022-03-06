@@ -4,20 +4,22 @@ import * as Yup from "yup";
 
 import Screen from "../components/Screen";
 import { Form, FormField, SubmitButton } from "../components/forms";
+import AppNavigator from "../navigation/AppNavigator";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
   password: Yup.string().required().min(4).label("Password"),
 });
 
-function LoginScreen(props) {
+function LoginScreen({ navigation }) {
   return (
     <Screen style={styles.container}>
       <Image style={styles.logo} source={require("../assets/MSDS498_CC_logo2.png")} />
 
       <Form
         initialValues={{ email: "", password: "" }}
-        onSubmit={(values) => console.log(values)}
+        //onSubmit={(values) => console.log(values)}
+        onSubmit={() => navigation.navigate("AppNavigator")}
         validationSchema={validationSchema}
       >
         <FormField
@@ -38,7 +40,7 @@ function LoginScreen(props) {
           secureTextEntry
           textContentType="password"
         />
-        <SubmitButton title="Login" />
+          <SubmitButton title="Login" />
       </Form>
     </Screen>
   );
@@ -49,8 +51,8 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   logo: {
-    width: 80,
-    height: 80,
+    width: 150,
+    height: 150,
     alignSelf: "center",
     marginTop: 50,
     marginBottom: 20,

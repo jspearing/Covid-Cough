@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { SafeAreaView, StyleSheet, View, Alert, Text, Button} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Audio } from 'expo-av'
 import { FontAwesome } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
@@ -9,76 +7,21 @@ import { Stopwatch } from 'react-native-stopwatch-timer';
 import * as FileSystem from "expo-file-system";
 import Spinner from 'react-native-loading-spinner-overlay';
 
-const Stack = createNativeStackNavigator();
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  boldText: {
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  spinnerTextStyle: {
-    color: 'black',
-  },
-  instructionText: {
-    fontWeight: 'normal',
-    textAlign: 'center',
-    paddingHorizontal: 20,
-  },
-  row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  fill: {
-    flex: 1,
-    margin: 16
-  },
-  button: {
-    margin: 16
-  }
-});
-
-
-export default function App(){
+export default function RecordScreen(){
   const [recording, setRecording] = React.useState();
   const [recordings, setRecordings] = React.useState([]);
   const [message, setMessage] = React.useState("");
   const [loading, setLoading] = React.useState(false);
-
+  console.log("in RecordScreen");
   // stop watch
   const [isStopwatchStart, setIsStopwatchStart] = React.useState(false);
   const [resetStopwatch, setResetStopwatch] = React.useState(false);
 
   // API to Run Model
   const MODEL_BACKEND = "https://covidcough.ue.r.appspot.com/evaluatecough/";
-
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="RecordCough" component={RecordCoughScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
   
-
-  function HomeScreen({navigation}) {
-    return (
-      <View style={styles.container} >
-        <Text>Welcome to the COVID Cough Application</Text>
-        <Button title="Record Cough" onPress = {() => navigation.navigate('RecordCough')} />
-      </View>
-    );
-  }
-  
-  function RecordCoughScreen({navigation}) {
+  //function RecordCoughScreen() {
+    console.log("in RecordCoughScreen"); 
     return (
       <SafeAreaView style={{ flex: 1 }}>
         <View style={styles.container}>
@@ -103,7 +46,7 @@ export default function App(){
         </View>
       </SafeAreaView>
     );
-  }
+  //}
   
   async function handleRecordCoughStart(){
     // console.log('Starting to record cough');
@@ -227,6 +170,39 @@ export default function App(){
     });
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  boldText: {
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  spinnerTextStyle: {
+    color: 'black',
+  },
+  instructionText: {
+    fontWeight: 'normal',
+    textAlign: 'center',
+    paddingHorizontal: 20,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  fill: {
+    flex: 1,
+    margin: 16
+  },
+  button: {
+    margin: 16
+  }
+});
 
 const options = {
   container: {

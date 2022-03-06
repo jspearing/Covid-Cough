@@ -1,5 +1,6 @@
 import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
+import { TouchableHighlight } from "react-native-gesture-handler";
 
 import Button from "../components/Button";
 //import routes from "../navigation/routes";
@@ -12,8 +13,13 @@ function WelcomeScreen({ navigation }) {
       source={require("../assets/MDT_CC_background1.png")}
     >
       <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={require("../assets/MSDS498_CC_logo2.png")} />
+        <TouchableHighlight onPress={() => navigation.navigate("AppInfoScreen")}>
+          <Image style={styles.logo} source={require("../assets/MSDS498_CC_logo2.png")} />
+        </TouchableHighlight>
         <Text style={styles.tagline}>Test your cough now!</Text>
+        <TouchableHighlight onPress={() => navigation.navigate("CompanyInfoScreen")}>
+          <Text>MediData Technologies</Text>
+        </TouchableHighlight>
       </View>
       <View style={styles.buttonsContainer}>
         <Button
@@ -41,6 +47,10 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   logo: {
+    width: 200,
+    height: 200,
+  },
+  logo2: {
     width: 200,
     height: 200,
   },

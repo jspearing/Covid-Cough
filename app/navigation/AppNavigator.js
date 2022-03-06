@@ -7,9 +7,10 @@ import HomeNavigator from "./HomeNavigator";
 import ListingEditScreen from "../screens/ListingEditScreen";
 import NewListingButton from "./NewListingButton";
 import routes from "./routes";
+import RecordScreen from "../screens/RecordScreen";
 
 const Tab = createBottomTabNavigator();
-
+console.log("in AppNavigator");
 const AppNavigator = () => (
   <Tab.Navigator>
     <Tab.Screen
@@ -22,12 +23,12 @@ const AppNavigator = () => (
       }}
     />
     <Tab.Screen
-      name="ListingEdit"
-      component={ListingEditScreen}
+      name="RecordScreen"
+      component={RecordScreen}
       options={({ navigation }) => ({
         tabBarButton: () => (
           <NewListingButton
-            onPress={() => navigation.navigate(routes.LISTING_EDIT)}
+            onPress={() => navigation.navigate(RecordScreen)}
           />
         ),
         tabBarIcon: ({ color, size }) => (

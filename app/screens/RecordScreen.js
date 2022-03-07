@@ -120,7 +120,7 @@ export default function RecordScreen(){
       const response = await FileSystem.uploadAsync(MODEL_BACKEND, audio_recording.file);
       const body = JSON.parse(response.body);
       console.log(body);
-      const response_info = () => Alert.alert('Results', 'Cough Type: ' + body.class + '\nProbability Dry: ' + body.percent_dry + '%\nProbability Wet: ' + body.percent_wet + '%', [
+      const response_info = () => Alert.alert('Results', 'Probability Positive: ' + body.percent_dry + '%\nProbability Negative: ' + body.percent_wet + '%', [
         {
           text: 'OK', onPress: () => console.log('OK Pressed')
         }
